@@ -5,15 +5,8 @@ import NumSoln from "./components/NumSoln";
 import ServiceCardsCarousel from "./components/ServiceCardsCarousel";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FeaturedProjects from "./components/FeaturedProject1";
-// import AboutSection from "./components/AboutSection";
-// import ServicesGrid from "./components/ServicesGrid";
-// import ProjectHighlights from "./components/ProjectHighlights";
-// import StatsSection from "./components/StatsSection";
-// import TeamSection from "./components/TeamSection";
-// import Testimonials from "./components/Testimonials";
-// import CallToAction from "./components/CallToAction";
-// import BlogHighlights from "./components/BlogHighlights";
-// import Footer from "./components/Footer";
+import TestimonialSection from "./components/TestimonialSection.";
+import Footer from "./components/Footer";
 
 import './App.css'
 
@@ -28,16 +21,8 @@ function App() {
       <ServiceCardsCarousel/>
       <WhyChooseUs/>
       <FeaturedProjects/>
-       {/*
-      <AboutSection />
-      <ServicesGrid />
-      <ProjectHighlights />
-      <StatsSection />
-      <TeamSection />
-      <Testimonials />
-      <CallToAction />
-      <BlogHighlights />
-      <Footer />  */}
+      <TestimonialSection/>
+      <Footer/>
     </div>
     </>
   )
