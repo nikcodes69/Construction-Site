@@ -10,6 +10,17 @@ const Login=()=> {
     setIsLoading(true);
     
     try {
+      const response = await fetch('http://localhost:5001/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password
+        }),
+      });
+      const data = await response.json();
       // Replace with your actual login API call
       console.log("Logging in with:", { email, password });
       // Simulate API call
