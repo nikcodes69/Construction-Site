@@ -13,6 +13,7 @@ import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "../authfrontend/Login";
+import OurTeam from "./components/OurTeam";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
                   <ServiceCardsCarousel />
                   <WhyChooseUs />
                   <FeaturedProjects />
+                  <OurTeam/>
                   <TestimonialSection />
                 </>
               }
