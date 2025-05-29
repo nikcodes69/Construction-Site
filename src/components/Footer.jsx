@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-b-2 border-yellow-500 pb-2 inline-block">HAMRO CONSTRUCTION</h3>
+            <h3 className="text-xl font-bold mb-4 border-b-2 border-yellow-500 pb-2 inline-block">AG CONSTRUCTION</h3>
             <p className="mt-4 text-gray-400 mb-6">
               Delivering quality construction services for over 25 years. Building dreams, creating foundations for the future.
             </p>
@@ -143,7 +143,7 @@ export default function Footer() {
                 <svg className="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
-                <span className="text-gray-400">hamroconstruction.com</span>
+                <span className="text-gray-400">agconstruction.com</span>
               </li>
               <li className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +186,7 @@ export default function Footer() {
       <div className="bg-gray-950 py-6">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} Hamro Construction. All rights reserved.
+            © {new Date().getFullYear()} AG Construction. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-sm text-gray-500 hover:text-yellow-500 transition-colors duration-300">Privacy Policy</a>

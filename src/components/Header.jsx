@@ -20,25 +20,16 @@ const Header = () => {
 
         {/* Desktop Navigation - hidden on mobile */}
         <nav className="text-white space-x-6 hidden md:flex">
-          <a href="#" className="hover:text-amber-400 transition-colors">
-            Home
-          </a>
-          <a href="#" className="hover:text-amber-400 transition-colors">
-            About
-          </a>
-          <a href="#" className="hover:text-amber-400 transition-colors">
-            Services
-          </a>
-          <a href="#" className="hover:text-amber-400 transition-colors">
-            Projects
-          </a>
-          <a href="#" className="hover:text-amber-400 transition-colors">
-            Contact
-          </a>
+        <a href="#home" className="hover:text-amber-400 transition-colors">Home</a>
+        <a href="#about" className="hover:text-amber-400 transition-colors">About</a>
+        <a href="#services" className="hover:text-amber-400 transition-colors">Services</a>
+        <a href="#projects" className="hover:text-amber-400 transition-colors">Projects</a>
+        <a href="#reviews" className="hover:text-amber-400 transition-colors">Reviews</a>
+          
           <Link to="/signup" className="hover:text-amber-400 transition-colors">
             SignUp
           </Link>
-          <Link to="/signup" className="hover:text-amber-400 transition-colors">
+          <Link to="/login" className="hover:text-amber-400 transition-colors">
             Login
           </Link>
         </nav>
@@ -86,36 +77,36 @@ const Header = () => {
       {mobileMenuOpen && (
         <nav className="bg-black text-white py-4 px-6 flex flex-col space-y-4 md:hidden absolute w-full z-50">
           <a
-            href="#"
+            href="#home"
             className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800"
           >
             Home
           </a>
           <a
-            href="#"
+            href="#about"
             className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800"
           >
             About
           </a>
           <a
-            href="#"
+            href="#services"
             className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800"
           >
             Services
           </a>
           <a
-            href="#"
+            href="#projects"
             className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800"
           >
             Projects
           </a>
-          <a href="#" className="hover:text-amber-400 transition-colors py-2">
-            Contact
+          <a href="#reviews" className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800">
+            Reviews
           </a>
-          <Link to="/signup" className="hover:text-amber-400 transition-colors">
+          <Link to="/signup" className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800">
             SignUp
           </Link>
-          <Link to="/login" className="hover:text-amber-400 transition-colors">
+          <Link to="/login" className="hover:text-amber-400 transition-colors py-2 border-b border-gray-800">
             Login
           </Link>
         </nav>

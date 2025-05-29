@@ -1,9 +1,10 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import FeatureProject1 from "../assets/featureproject1.jpg";
-import FeatureProject2 from "../assets/featureproject2.jpg";
-import FeatureProject3 from "../assets/featureproject3.jpg";
-import FeatureProject4 from "../assets/featureproject4.jpg";
+import FeatureProject1 from "../assets/featureproject1.jpeg";
+import FeatureProject2 from "../assets/featureproject2.jpeg";
+import FeatureProject3 from "../assets/featureproject3.jpeg";
+import FeatureProject4 from "../assets/featureproject4.jpeg";
+import FeatureProject5 from "../assets/featureproject5.jpg";
 import { useState,useEffect } from "react";
 
 // Import Swiper styles
@@ -16,39 +17,33 @@ import "swiper/css/scrollbar";
 const projects = [
   {
     id: 1,
-    title: "Axel Towers",
+    title: "Modern House",
     category: "Building & Interior",
     image: FeatureProject1,
   },
   {
     id: 2,
-    title: "Glass Hotel",
+    title: "Hotel Building",
     category: "Renovation & Architecture",
     image: FeatureProject2,
   },
   {
     id: 3,
-    title: "Bridge River",
-    category: "Renovation & Architecture",
+    title: "Construction Site",
+    category: "Construction & Interior",
     image: FeatureProject3,
   },
   {
     id: 4,
-    title: "Atlas Museum",
+    title: "Educational Block",
     category: "Construction & Interior",
     image: FeatureProject4,
   },
   {
     id: 5,
-    title: "Atlas Museum",
+    title: "Lavish Apartment",
     category: "Construction & Interior",
-    image: FeatureProject4,
-  },
-  {
-    id: 6,
-    title: "Atlas Museum",
-    category: "Construction & Interior",
-    image: FeatureProject4,
+    image: FeatureProject5,
   }
   // You can add more projects as needed
 ];
@@ -80,10 +75,9 @@ export default function FeaturedProjects() {
         <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
           Our Featured Projects
         </h2>
-        <p className="mb-6 md:mb-10 max-w-2xl text-sm md:text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
+    
+        <p className="mb-6 md:mb-10 max-w-2xl text-base md:text-lg font-medium whitespace-normal md:whitespace-nowrap">
+          A quick look at our standout construction projects—built with precision, quality, and a commitment to excellence.
         </p>
 
         <Swiper

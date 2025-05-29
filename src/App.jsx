@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSection";
 import NumSoln from "./components/NumSoln";
 import ServiceCardsCarousel from "./components/ServiceCardsCarousel";
 import WhyChooseUs from "./components/WhyChooseUs";
-import FeaturedProjects from "./components/FeaturedProject1";
+import FeaturedProjects1 from "./components/FeaturedProject1";
 import TestimonialSection from "./components/TestimonialSection.";
 import Footer from "./components/Footer";
 import Signup from "../authfrontend/SignUp";
@@ -26,17 +26,21 @@ function App() {
             <Route
               path="/"
               element={
-                <>
-                  <HeroSection />
-                  <NumSoln />
-                  <ServiceCardsCarousel />
-                  <WhyChooseUs />
-                  <FeaturedProjects />
-                  <OurTeam/>
-                  <TestimonialSection />
-                </>
+              <>
+
+              <div id="home"><HeroSection /></div>
+              <div id="about"><NumSoln /></div>
+
+              <div id="services"><ServiceCardsCarousel /></div>
+              <WhyChooseUs />
+              <div id="projects"><FeaturedProjects1 /></div>
+              <div id="team"><OurTeam /></div>
+              <div id="reviews"><TestimonialSection /></div>
+
+              </>
               }
-            />
+            />            
+
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             

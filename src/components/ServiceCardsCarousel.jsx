@@ -1,53 +1,25 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const ServiceCard = ({ title, description, icon, image }) => {
+const ServiceCard = ({ title, description, icon }) => {
   const [expanded, setExpanded] = useState(false);
 
-  // Determine if we should show the image or icon
-  const hasImage = image;
+  const toggleExpanded = () => {
+    setExpanded((prev) => !prev);
+  };
 
   return (
-    <div className="bg-cream-50 border border-amber-200 rounded-lg p-6 h-full flex flex-col">
-      <div className="mb-4">
-        {hasImage ? (
-          <div className="rounded-lg overflow-hidden h-48 mb-4">
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ) : (
-          <div className="text-amber-400 mb-2">{icon}</div>
-        )}
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
-        <div className={`text-gray-600 ${expanded ? "" : "line-clamp-4"}`}>
-          {description}
-        </div>
-      </div>
-
-      <div className="mt-auto">
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="flex items-center text-amber-600 hover:text-amber-800 transition-colors font-medium"
-        >
-          {expanded ? "View Less" : "View More"}
-          <svg
-            className="w-4 h-4 ml-1"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={expanded ? "M19 9l-7 7-7-7" : "M14 5l7 7-7 7"}
-            />
-          </svg>
-        </button>
-      </div>
+    <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+      <div className="mb-4 text-amber-500">{icon}</div>
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className={`text-gray-600 mb-4 ${!expanded ? "line-clamp-2" : ""}`}>
+        {description}
+      </p>
+      <button
+        onClick={toggleExpanded}
+        className="text-amber-600 font-medium hover:underline"
+      >
+        {expanded ? "View Less" : "View More"}
+      </button>
     </div>
   );
 };
@@ -55,13 +27,12 @@ const ServiceCard = ({ title, description, icon, image }) => {
 const ServiceCardsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Sample service data
   const services = [
     {
       id: 1,
       title: "Engineering Techniques",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "We utilize modern engineering methods and tools to deliver efficient, high-quality construction solutions tailored to every project's unique demands. Our expert team ensures precision and innovation from start to finish.",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
           <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
@@ -72,7 +43,7 @@ const ServiceCardsCarousel = () => {
       id: 2,
       title: "Project Management",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "From planning to execution, we manage every aspect of construction projects with a focus on time, cost, and quality. Our streamlined processes and communication ensure seamless collaboration and successful outcomes.",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
           <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
@@ -83,7 +54,7 @@ const ServiceCardsCarousel = () => {
       id: 3,
       title: "Financial Results",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "We deliver construction solutions that balance quality and budget. Our transparent costing and efficient execution help maximize return on investment while minimizing unnecessary expenses.",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -98,7 +69,7 @@ const ServiceCardsCarousel = () => {
       id: 4,
       title: "Safety Standards",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Safety is our top priority on every project.",
+        "Safety is our top priority. We strictly follow industry safety regulations and implement rigorous on-site protocols to ensure a secure environment for workers and clients at all times.",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -111,11 +82,9 @@ const ServiceCardsCarousel = () => {
     },
   ];
 
-  // Calculate the indices for the visible cards
-  const cardsToShow = 3; // Show 3 cards at a time
+  const cardsToShow = 3;
   const totalItems = services.length;
 
-  // Function to calculate the indices of the 3 cards we want to show
   const getVisibleIndices = () => {
     const indices = [];
     for (let i = 0; i < cardsToShow; i++) {
@@ -125,7 +94,6 @@ const ServiceCardsCarousel = () => {
     return indices;
   };
 
-  // Navigation functions
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? totalItems - 1 : prevIndex - 1
@@ -143,81 +111,58 @@ const ServiceCardsCarousel = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
-          {/* <div className="flex space-x-4">
-            <button 
-              onClick={goToPrevious}
-              className="p-2 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-colors"
-              aria-label="Previous services"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button 
-              onClick={goToNext}
-              className="p-2 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-colors"
-              aria-label="Next services"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div> */}
         </div>
 
-        <div className="flex justify-between">
-            <button
-              onClick={goToPrevious}
-              className="p-2 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-colors"
-              aria-label="Previous services"
+        <div className="flex justify-between mb-6">
+          <button
+            onClick={goToPrevious}
+            className="p-2 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-colors"
+            aria-label="Previous services"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={goToNext}
-              className="p-2 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-colors"
-              aria-label="Next services"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={goToNext}
+            className="p-2 rounded-full bg-amber-100 text-amber-600 hover:bg-amber-200 transition-colors"
+            aria-label="Next services"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-         
           {visibleIndices.map((index) => (
             <ServiceCard
               key={services[index].id}
               title={services[index].title}
               description={services[index].description}
               icon={services[index].icon}
-              image={services[index].image}
             />
           ))}
-
         </div>
       </div>
     </div>
