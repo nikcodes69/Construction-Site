@@ -13,69 +13,69 @@ export default function TestimonialSection() {
   const testimonials = [
     {
       id: 1,
-      name: "Hikmet Atceken",
-      username: "@hikaceken",
+      name: "Suman Shrestha",
+      username: "@sumans",
       avatar: Avatar1,
-      content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more."
+      content: "Professional, on-time, and budget-friendly. Our dream home came to life just as we imagined!"
     },
     {
       id: 2,
-      name: "Arda Guler",
-      username: "@hikaceken",
+      name: "Bikash Thapa",
+      username: "@bthapa",
       avatar: Avatar2,
-      content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      content: "The construction quality exceeded our expectations. They delivered everything before the deadline."
     },
     {
       id: 3,
-      name: "Maria Ancelotti",
-      username: "@hikaceken",
+      name: "Anita Koirala",
+      username: "@anitak",
       avatar: Avatar3,
-      content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more."
+      content: "Highly professional team. They handled our residential project with great care and attention to detail."
     },
     {
       id: 4,
-      name: "Ragip Diler",
-      username: "@hikaceken",
+      name: "Rajiv Adhikari",
+      username: "@rajivadh",
       avatar: Avatar4,
-      content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+      content: "Clear communication and transparent pricing. We always knew what was happening on-site."
     },
     {
       id: 5,
-      name: "Jenny Wilson",
-      username: "@hikaceken",
+      name: "Sita Lama",
+      username: "@sitalama",
       avatar: Avatar5,
-      content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more."
+      content: "Very responsive and supportive throughout the project. I’d definitely hire them again."
     },
     {
       id: 6,
-      name: "Guy Hawkins",
-      username: "@hikaceken",
+      name: "Prakash Gurung",
+      username: "@pgurung",
       avatar: Avatar6,
-      content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      content: "The whole process—from design to handover—was smooth and efficient. Truly satisfied!"
     },
     {
       id: 7,
-      name: "Sarah Johnson",
-      username: "@sarahjohn",
+      name: "Ramesh Khadka",
+      username: "@rkhadka",
       avatar: Avatar7,
-      content: "The interface is incredibly intuitive. Our entire team was able to adapt to the new system within days, not weeks. Productivity has increased by 30% since implementation."
+      content: "They built our commercial space exactly to our specs. No hidden costs, no delays."
     },
     {
       id: 8,
-      name: "Michael Zhang",
-      username: "@mzhang",
+      name: "Meena Maharjan",
+      username: "@meenam",
       avatar: Avatar8,
-      content: "Customer support is responsive and helpful. They've gone above and beyond to ensure our specific needs are met. I'd recommend this solution to anyone in our industry."
+      content: "They listened to our needs and offered practical solutions. Great experience overall."
     },
     {
       id: 9,
-      name: "Priya Patel",
-      username: "@priyap",
+      name: "Deepak Bista",
+      username: "@deepakb",
       avatar: Avatar9,
-      content: "After trying multiple solutions, this is the only one that truly delivered on all promises. The analytics features have transformed how we make business decisions."
+      content: "One of the best construction teams I’ve worked with. Quality work and great coordination."
     }
   ];
-
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -141,9 +141,10 @@ export default function TestimonialSection() {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-6">
-        <div className="max-w-7xl mx-auto py-12">
-        {/* Header Section - Modified to include text directly with the title */}
+    // Removed min-h-screen here to prevent extra vertical space
+    <div className="bg-gray-900 text-white p-6">
+      <div className="max-w-7xl mx-auto py-12">
+        {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
           <div className="mb-4 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Public Cheers For Us!</h2>
@@ -164,8 +165,8 @@ export default function TestimonialSection() {
           </div>
         </div>
 
-        {/* Testimonials Grid with Animation */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 ${viewAll ? '' : ''}`}>
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {displayedTestimonials.map((testimonial) => (
             <div 
               key={testimonial.id} 

@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSectionImage from "../assets/newherosection.jpg"; 
+import HeroSectionImage from "../assets/herosection1.jpeg"; 
 
 const HeroSection = () => {
   return (
@@ -12,7 +12,7 @@ const HeroSection = () => {
       />
 
       //Optional Dark Overlay
-      <div className="absolute inset-0 bg-black opacity-75 z-10" />
+      <div className="absolute inset-0 bg-black opacity-25 z-10" />
 
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-white text-4xl md:text-5xl font-bold max-w-3xl">

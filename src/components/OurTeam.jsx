@@ -8,8 +8,8 @@ const OurTeam=()=> {
   const teamMembers = [
     {
       id: 1,
-      name: "Jessica Down",
-      role: "Painter",
+      name: "Pratikshya Basyal",
+      role: "Chief Executive Officer",
       image: member1,
       socialLinks: [
         { icon: <FaFacebook size={16} />, url: "#" },
@@ -20,8 +20,8 @@ const OurTeam=()=> {
     },
     {
       id: 2,
-      name: "John Garris",
-      role: "Engineer",
+      name: "Asmita Basyal",
+      role: "Cheif Financial Officer",
       image: member2,
       socialLinks: [
         { icon: <FaFacebook size={16} />, url: "#" },
@@ -32,8 +32,8 @@ const OurTeam=()=> {
     },
     {
       id: 3,
-      name: "Dave Collin",
-      role: "Architect",
+      name: "Pradhumna Paudel",
+      role: "Chief Technical Officer",
       image: member3,
       socialLinks: [
         { icon: <FaFacebook size={16} />, url: "#" },
@@ -44,8 +44,8 @@ const OurTeam=()=> {
     },
     {
       id: 4,
-      name: "Kate Drane",
-      role: "Industrial Engineer",
+      name: "Chandramani Paudel",
+      role: "Chief Legal Officer",
       image: member4,
       socialLinks: [
         { icon: <FaFacebook size={16} />, url: "#" },

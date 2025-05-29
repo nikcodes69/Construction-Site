@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-b-2 border-yellow-500 pb-2 inline-block">BUILDMASTER</h3>
+            <h3 className="text-xl font-bold mb-4 border-b-2 border-yellow-500 pb-2 inline-block">HAMRO CONSTRUCTION</h3>
             <p className="mt-4 text-gray-400 mb-6">
               Delivering quality construction services for over 25 years. Building dreams, creating foundations for the future.
             </p>
@@ -129,21 +129,21 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span className="text-gray-400">
-                  1234 Construction Ave,<br />
-                  Building District, City 56789
+                789 Lakeside Road,<br/>
+                Ward No. 5, Pokhara 3370
                 </span>
               </li>
               <li className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
-                <span className="text-gray-400">(555) 123-4567</span>
+                <span className="text-gray-400">(+977) 9856044217</span>
               </li>
               <li className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
-                <span className="text-gray-400">info@buildmaster.com</span>
+                <span className="text-gray-400">hamroconstruction.com</span>
               </li>
               <li className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +186,7 @@ export default function Footer() {
       <div className="bg-gray-950 py-6">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} BuildMaster Construction. All rights reserved.
+            © {new Date().getFullYear()} Hamro Construction. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-sm text-gray-500 hover:text-yellow-500 transition-colors duration-300">Privacy Policy</a>
